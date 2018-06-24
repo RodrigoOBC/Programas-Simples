@@ -36,7 +36,9 @@ class Retangulo:
 
     def area(self, b, h):
         return b * h
-
+    
+    def diagonal(self, b, h):
+        return (b**2 + h**2)**0.5
 
 class Trapezio:
     def perimetro(self, lado, b, B):
