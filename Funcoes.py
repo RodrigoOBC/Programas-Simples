@@ -7,7 +7,7 @@ from abc import abstractmethod
 
 @abstractmethod
 class geometria():
-    pi = 3, 14
+    pi = 3.14
 
 
     def perimetro(self):
