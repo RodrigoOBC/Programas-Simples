@@ -7,7 +7,8 @@ from abc import abstractmethod
 
 @abstractmethod
 class geometria():
-    pi = 3.14
+    def __init__(self):
+        self.pi = 3.14
 
 
     def perimetro(self):
@@ -26,7 +27,7 @@ class Triangulo(geometria):
     def perimetro(self, lado):
         return lado * 3
 
-    def area(self,b,h):
+    def area(self, b, h):
         return (b*h)/2
 
     def hipotenusa(self, b, h):
@@ -42,19 +43,19 @@ class Quadrado(geometria):
         return lado*2
 
     def diagonal(self, lado):
-        return self.area(lado)**0.5
+        return round(lado*(2**0.5),2)
 
 
 
 class Retangulo(geometria):
 
-    def perimetro(lado):
+    def perimetro(self,lado):
         return lado * 4
 
-    def area(b, h):
+    def area(self,b, h):
         return b * h
 
-    def diagonal(b, h):
+    def diagonal(self,b, h):
         return (b ** 2 + h ** 2) ** 0.5
 
 class Trapezio(geometria):
